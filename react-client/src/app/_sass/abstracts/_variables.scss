@@ -1,3 +1,28 @@
+/*********************** ECOSPIN ***********************/
+
+$ecospin-black: #363941;
+$ecospin-grey: #AAAAAA;
+$ecospin-lightgrey: #F0F0F0;
+$ecospin-white: #FFFFFF;
+$ecospin-green: #75D375;
+$ecospin-green-light: #ABE6A9;
+$ecospin-green-ultralight: #CCF1CA;
+
+
+$font-family-Quicksand: 'Quicksand', sans-serif;
+
+$font-family-base: $font-family-Quicksand;
+$font-color-base: $ecospin-black;
+
+$font-size-xs: 0.75rem;
+$font-size-s: 0.875rem;
+$font-size-m: 1rem;
+$font-size-l: 1.125rem;
+$font-size-xl: 1.5rem;
+$font-size-xxl: 1.875rem;
+
+/*********************** BOOTSTRAP ***********************/
+
 $color-black: #222;
 $color-white: #f1f1f1;
 $color-purple: #7E57C5;
@@ -6,19 +31,13 @@ $color-red: #ED0034;
 $color-orange: #F58732;
 $color-blue: #00A5D9;
 
-$font-family-Roboto: 'Roboto', sans-serif;
-$font-family-Montserrat: 'Montserrat', sans-serif;
-
-/*
- * Bootstrap
- */
 $theme-colors: (
-  "primary": $color-purple,
+  "primary": $ecospin-green,
   "danger": $color-red,
-  "ahs-purple": $color-purple
+  "ahs-purple": $ecospin-green
 );
 
-$font-family-base: $font-family-Roboto;
+$font-family-base: $font-family-Quicksand;
 
 $grid-columns: 12 !default;
 $grid-gutter-width: 48px !default;
@@ -38,3 +57,28 @@ $container-max-widths: (
   lg: 960px,
   xl: 1360px
 ) !default;
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}

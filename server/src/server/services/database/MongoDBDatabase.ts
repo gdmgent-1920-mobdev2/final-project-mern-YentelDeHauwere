@@ -15,6 +15,7 @@ import {
   ICategory,
   Category,
 } from '../../models/mongoose';
+import { Z_FINISH, Z_FIXED, Z_DEFAULT_COMPRESSION } from 'zlib';
 
 class MongoDBDatabase {
   private config: IConfig;

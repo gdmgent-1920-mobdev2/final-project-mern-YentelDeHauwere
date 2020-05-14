@@ -1,0 +1,41 @@
+import { default as React } from 'react';
+import { useState } from 'react';
+
+import ReactMapGL from 'react-map-gl'
+
+import './MapboxLayout.scss';
+
+const MapboxLayout = ({children}) => {
+
+	const getCoords = (pos) => {
+		console.log(pos.coords);
+	}
+
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(getCoords)
+	} else {
+		alert('Geolocation not supported by your browser')
+	}
+
+	const [viewport, setViewport] = useState ({
+		width: '100vw',
+		height: '100vh',
+		latitude: 37.7577,
+		longitude: -122.4376,
+		zoom: 8
+	});
+
+	return (
+		<div className="mapbox">
+			<ReactMapGL
+			mapboxApiAccessToken="pk.eyJ1IjoieWVudGVsZGVoYXV3ZXJlIiwiYSI6ImNrMmdjcjV3dTBhZ3AzZHBjY3QwbnFwMWUifQ.oEwwhTI8SVFUX_i3TKwMug"
+			{...viewport}
+			/>
+		</div>
+	);
+
+
+
+};
+
+export default MapboxLayout;

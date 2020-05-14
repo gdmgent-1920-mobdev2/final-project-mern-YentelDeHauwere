@@ -22,7 +22,11 @@
     "watch": "cd server && yarn watch:serve"
   },
   "dependencies": {
+    "mapbox-gl": "^1.10.0",
     "node": "^12.16.1",
+    "react": "^16.13.1",
+    "react-geolocated": "^3.0.1",
+    "react-map-gl": "^5.2.5",
     "yarn": "^1.17.3"
   }
 }
