@@ -3,6 +3,8 @@ import { default as React, useState } from 'react';
 import * as Routes from '../routes';
 import { useAuth } from '../services';
 import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 import { ButtonLarge } from '../components'
 
@@ -36,23 +38,21 @@ const SignInPage = ({children}) => {
 				<div className="auth-group"> 
 					<div className="form-label-group">
 						{/* <label className="form-label" for="fname">Email</label>	 */}
-						<i class="fas fa-dragon"></i>
+						<i className="fas fa-envelope"></i>
 						<input type="email" id="inputEmail" className="form-control" placeholder="Email" required autoFocus onChange={(ev) => setEmail(ev.target.value)} />
 					</div>
 					<div className="form-label-group">
 						{/* <label className="form-label" for="password">Password</label>	 */}
-						<i class="fas fa-dragon"></i>
+						<i className="fas fa-lock"></i>
 						<input type="password" id="inputPassword" className="form-control" placeholder="Password" required onChange={(ev) => setPassword(ev.target.value)} />                    
 					</div>
 				</div>
 				<div>
 					<ButtonLarge content="Sign In" />
-					<div className="auth-forgot-pw"><a>Forgot your password?</a></div>
+					<div className="auth-forgot-pw"><p>Forgot your password?</p></div>
 				</div>
 			</div>
-
-
-			<div className="auth-bottom" ><a>Don't have an account yet? <b className="auth-bottom-bold">Sign Up</b> </a></div>
+			<Link to="/auth/signup"><div className="auth-bottom" ><p>Don't have an account yet? <b className="auth-bottom-bold">Sign Up</b> </p></div></Link>
 		</form>
 	</div>
   );

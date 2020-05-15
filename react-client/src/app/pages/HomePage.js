@@ -1,10 +1,16 @@
 import { default as React } from 'react';
 import * as Routes from '../routes';
+import { Navbar, Inputbox } from '../components';
+import { FiSearch } from "react-icons/fi";
 
-const HomePage = ({}) => {
+const HomePage = ({children}) => {
 	
   return (
-	  <p>jep</p>
+	<div>
+		<Inputbox placeholder='Search by adress' type='text'  />
+		<Navbar />
+		{children}
+	</div>
   )
 };
 

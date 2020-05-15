@@ -6,6 +6,7 @@ const Inputbox = ({ placeholder, type }) => {
 
   return (
 	  <input type={type} className="inputbox" placeholder={placeholder} >
+		  
 	  </input>
   );
 

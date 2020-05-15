@@ -1,0 +1,21 @@
+/*********************** ECOSPIN ***********************/
+/*********************** BOOTSTRAP ***********************/
+/* Extra small devices (phones, 600px and down) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800|Roboto:400,400i,500,500i,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+.button-large {
+  color: #FFFFFF !important;
+  border-radius: 50px !important;
+  font-weight: 700 !important;
+  margin-top: 30px;
+  font-size: 1.125rem !important;
+  cursor: pointer;
+  -webkit-transition: 2s;
+  transition: 2s;
+  text-decoration: none;
+}
+/*# sourceMappingURL=ButtonLarge.css.map */

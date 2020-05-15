@@ -4,3 +4,4 @@ export * from './posts';
 export * from './section';
 export * from './input';
 export * from './buttons';
+export * from './navbar';

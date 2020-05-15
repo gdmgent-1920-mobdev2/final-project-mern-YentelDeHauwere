@@ -11,13 +11,18 @@ $page-footer-border: 2px solid #000;
 
 /********************** WELCOME **********************/
 
+.page-welcome {
+	display: flex;
+	flex-direction: column;
+}
+
 .welcome {
 	&-background {
 		background-image: url(../_static/images/welcome_background.jpg);
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-position: center;
-		webkit-background-size: cover;
+		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
@@ -28,5 +33,34 @@ $page-footer-border: 2px solid #000;
 
 	&-content {
 		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 32px;
+		justify-content: space-between;
+		height: 100vh;
+
+		&-header {
+			display: flex;
+			justify-content: center;
+			margin-top: 5vh;
+
+			&-logo {
+				width: 80%;
+				max-width: 500px;
+			}
+		}
+
+		&-action {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+		}
 	}
 }
+
+.auth-bottom.white {
+	color: $ecospin-white;
+}
+
+

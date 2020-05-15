@@ -1,9 +1,11 @@
 import { default as React} from 'react';
 
+import { Navbar } from '../components';
+
 const TestPage = ({children}) => {
 
   return (
-	<p>test</p>
+	<Navbar />
   );
 };
 

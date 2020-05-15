@@ -3,6 +3,8 @@ import { default as React, useState } from 'react';
 import * as Routes from '../routes';
 import { useAuth } from '../services';
 import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 import { ButtonLarge } from '../components'
 
@@ -37,33 +39,33 @@ const SignUpPage = ({children}) => {
 				<div className="auth-group"> 
 					<div className="form-label-group">
 						{/* <label className="form-label" for="fname">First name</label> */}
-						<i class="fas fa-dragon"></i>
-						<input type="text" id="inputFirstName" className="form-control" placeholder="First Name" onclick="getfocus()" />
+						<i className="fas fa-user"></i>
+						<input type="text" id="inputFirstName" className="form-control" autoFocus placeholder="First Name" />
 					</div>
 					<div className="form-label-group">
 						{/* <label className="form-label" for="fname">Last Name</label> */}
-						<i class="fas fa-dragon"></i>
+						<i className="fas fa-user"></i>
 						<input type="text" id="inputLastName" className="form-control" placeholder="Last Name" />
 					</div>
 					<div className="form-label-group">
 						{/* <label className="form-label" for="fname">Email</label>	 */}
-						<i class="fas fa-dragon"></i>
-						<input type="email" id="inputEmail" className="form-control" placeholder="Email" required autoFocus onChange={(ev) => setEmail(ev.target.value)} />
+						<i className="fas fa-envelope"></i>
+						<input type="email" id="inputEmail" className="form-control" placeholder="Email" required onChange={(ev) => setEmail(ev.target.value)} />
 					</div>
 					<div className="form-label-group">
 						{/* <label className="form-label" for="fname">Password</label> */}
-						<i class="fas fa-dragon"></i>
+						<i className="fas fa-lock"></i>
 						<input type="password" id="inputPassword" className="form-control" placeholder="Password" required onChange={(ev) => setPassword(ev.target.value)} />                    
 					</div>
 					<div className="form-label-group">
 						{/* <label className="form-label" for="fname">Repeat Password</label> */}
-						<i class="fas fa-dragon"></i>
+						<i className="fas fa-lock"></i>
 						<input type="password" id="inputRepeatPassword" className="form-control" placeholder="Repeat Password"/>                    
 					</div>
 				</div>
 				<ButtonLarge content="Sign Up" />
 			</div>
-			<div className="auth-bottom" ><a>Don't have an account yet? <b className="auth-bottom-bold" >Sign Up</b></a></div>
+			<Link to="/auth/signin"><div className="auth-bottom" ><p>Already have an account? <b className="auth-bottom-bold" >Sign In</b></p></div></Link>
 		</form>
 	</div>
   );

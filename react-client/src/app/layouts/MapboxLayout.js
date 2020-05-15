@@ -8,7 +8,13 @@ import './MapboxLayout.scss';
 const MapboxLayout = ({children}) => {
 
 	const getCoords = (pos) => {
-		console.log(pos.coords);
+		setViewport({
+			width: '100vw',
+			height: '100vh',
+			latitude: pos.coords.latitude,
+			longitude: pos.coords.longitude,
+			zoom: 12
+		})
 	}
 
 	if (navigator.geolocation) {
@@ -22,20 +28,23 @@ const MapboxLayout = ({children}) => {
 		height: '100vh',
 		latitude: 37.7577,
 		longitude: -122.4376,
-		zoom: 8
+		zoom: 12
 	});
 
 	return (
-		<div className="mapbox">
-			<ReactMapGL
-			mapboxApiAccessToken="pk.eyJ1IjoieWVudGVsZGVoYXV3ZXJlIiwiYSI6ImNrMmdjcjV3dTBhZ3AzZHBjY3QwbnFwMWUifQ.oEwwhTI8SVFUX_i3TKwMug"
-			{...viewport}
-			/>
+		<div className="page">
+			<div className="page-main">
+				{children}
+			</div>
+		
+			<div className="mapbox">
+				<ReactMapGL
+				mapboxApiAccessToken="pk.eyJ1IjoieWVudGVsZGVoYXV3ZXJlIiwiYSI6ImNrMmdjcjV3dTBhZ3AzZHBjY3QwbnFwMWUifQ.oEwwhTI8SVFUX_i3TKwMug"
+				{...viewport}
+				/>
+			</div>
 		</div>
 	);
-
-
-
 };
 
 export default MapboxLayout;
