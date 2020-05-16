@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 import { ButtonLarge } from '../components'
 
-const SignInPage = ({children}) => {
+const SignInPage = () => {
   const { signInLocal } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -37,12 +37,10 @@ const SignInPage = ({children}) => {
 				<p className="auth-divider">or log in with email</p>
 				<div className="auth-group"> 
 					<div className="form-label-group">
-						{/* <label className="form-label" for="fname">Email</label>	 */}
 						<i className="fas fa-envelope"></i>
 						<input type="email" id="inputEmail" className="form-control" placeholder="Email" required autoFocus onChange={(ev) => setEmail(ev.target.value)} />
 					</div>
 					<div className="form-label-group">
-						{/* <label className="form-label" for="password">Password</label>	 */}
 						<i className="fas fa-lock"></i>
 						<input type="password" id="inputPassword" className="form-control" placeholder="Password" required onChange={(ev) => setPassword(ev.target.value)} />                    
 					</div>

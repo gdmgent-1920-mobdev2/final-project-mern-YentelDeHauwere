@@ -1,12 +1,12 @@
 import { default as React} from 'react';
 
-import { Navbar } from '../components';
-
-const TestPage = ({children}) => {
-
+const TestPage = () => {
+	
   return (
-	<Navbar />
-  );
+	  <div>
+
+	  </div>
+  )
 };
 
 export default TestPage;

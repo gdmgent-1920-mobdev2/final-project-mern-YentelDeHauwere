@@ -1,4 +1,4 @@
-import { default as Inputbox } from './Inputbox';
+import { default as Inputbox } from './Searchbar';
 
 export {
   Inputbox,
