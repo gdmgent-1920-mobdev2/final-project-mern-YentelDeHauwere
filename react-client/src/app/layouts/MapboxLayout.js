@@ -43,18 +43,21 @@ const MapboxLayout = ({children}) => {
 	return (
 		<div className="page">
 			<div className="page-main">
+				
+				<div className="mapbox">
+					<ReactMapGL {...viewport} mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN} 
+						onViewportChange={viewport => {
+							setViewport(viewport)
+						}}>
+
+						<SVGOverlay redraw={redraw} />
+					</ReactMapGL>
+				</div>
+
 				{children}
 			</div>
 		
-			<div className="mapbox">
-				<ReactMapGL {...viewport} mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN} 
-					onViewportChange={viewport => {
-						setViewport(viewport)
-					}}>
-
-					<SVGOverlay redraw={redraw} />
-				</ReactMapGL>
-			</div>
+			
 		</div>
 	);
 };

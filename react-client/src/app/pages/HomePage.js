@@ -1,14 +1,20 @@
 import { default as React } from 'react';
-import * as Routes from '../routes';
-import { Navbar, Inputbox } from '../components';
+import { Navbar, Inputbox, Slider, SlideItem } from '../components';
 
-const HomePage = ({children}) => {
+const HomePage = () => {
 	
   return (
 	<div>
-		<Inputbox />
-		<Navbar />
-		{children}
+		<Inputbox/>
+
+		<Navbar/>
+
+		<Slider>
+			<SlideItem id="slide-1"/>
+			<SlideItem id="slide-2"/>
+			<SlideItem id="slide-3"/>
+		</Slider>
+
 	</div>
   )
 };

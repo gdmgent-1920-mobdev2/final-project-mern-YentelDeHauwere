@@ -5,3 +5,4 @@ export * from './section';
 export * from './input';
 export * from './buttons';
 export * from './navbar';
+export * from './slider';
