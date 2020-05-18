@@ -15,3 +15,4 @@ export const BACKOFFICE_POSTS_EDIT = '/admin/posts/:id/edit';
 
 
 export const TEST = '/test';
+export const TEST2 = '/test2';

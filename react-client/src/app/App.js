@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Redirect, Switch } from 'react-router-dom';
 
-import { ContactPage, HomePage, NotFoundPage, WelcomePage, SignInPage, SignUpPage, PostsPage, PostDetailPage, TestPage } from './pages';
+import { ContactPage, HomePage, NotFoundPage, WelcomePage, SignInPage, SignUpPage, PostsPage, PostDetailPage, TestPage, TestPage2 } from './pages';
 import { AdminPage } from './admin/pages';
 import { BackofficeLayout, PageLayout, ErrorLayout, AuthLayout, MapboxLayout } from './layouts';
 import { AuthRouteWithLayout, RouteWithLayout } from './utilities';
@@ -18,6 +18,7 @@ function App() {
           <Router basename='/'>
             <Switch>
 				<RouteWithLayout exact path={Routes.TEST} component={TestPage} layout={PageLayout} />
+				<RouteWithLayout exact path={Routes.TEST2} component={TestPage2} layout={PageLayout} />
 
 				<RouteWithLayout exact path={Routes.WELCOME} component={WelcomePage} layout={PageLayout} />
 

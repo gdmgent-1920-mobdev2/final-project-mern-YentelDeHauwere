@@ -9,6 +9,7 @@ import { default as SignInPage } from './SignInPage';
 import { default as SignUpPage } from './SignUpPage';
 
 import { default as TestPage } from './TestPage';
+import { default as TestPage2 } from './TestPage2';
 
 
 
@@ -21,5 +22,6 @@ export {
   WelcomePage,
   SignInPage,
   SignUpPage,
-  TestPage
+  TestPage,
+  TestPage2,
 }
