@@ -8,8 +8,9 @@ const useApi = () => useContext(ApiContext);
 const ApiProvider = ({children}) => {
   const BASE_URL = `${apiConfig.baseURL}`;
 
+  // this functions finds every data of vehicle
   const findAllPosts = async (query = null) => {
-    let url = `${BASE_URL}/posts`;
+    let url = `${BASE_URL}/search`;
     if (query !== null) {
       url += (url.indexOf('?') === -1 ? '?' : '&') + queryParams(query);
     }

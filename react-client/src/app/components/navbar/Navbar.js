@@ -8,24 +8,24 @@ const Navbar = () => {
 
   return (
 	  <div className="navb">
-		<NavLink to='/'  className="navb-link" activeClassName="navb-link-icon-active">
+		<NavLink to='/home'  className="navb-link" activeClassName="navb-link-icon-active">
 			<AiOutlineHome className="navb-link-icon"  />
 		</NavLink>
 		
-		<NavLink to='/search'  className="navb-link">
-			<AiOutlineSearch className="navb-link-icon" activeClassName="navb-link-icon-active" />
+		<NavLink to='/search'  className="navb-link"  activeClassName="navb-link-icon-active">
+			<AiOutlineSearch className="navb-link-icon" />
 		</NavLink>
 
-		<NavLink to='/notifications'  className="navb-link">
-			<AiOutlineBell className="navb-link-icon" activeClassName="navb-link-icon-active" />
+		<NavLink to='/notif/messages' isActive={(_, { pathname }) => ["/notif/messages", "/notif/notifications"].includes(pathname)}   className="navb-link" activeClassName="navb-link-icon-active">
+			<AiOutlineBell className="navb-link-icon" />
 		</NavLink>
 
-		<NavLink to='/profile'  className="navb-link"> 
-			<AiOutlineUser className="navb-link-icon" activeClassName="navb-link-icon-active" />
+		<NavLink to='/profile/routes' isActive={(_, { pathname }) => ["/profile/routes", "/profile/posts"].includes(pathname)} className="navb-link" activeClassName="navb-link-icon-active"> 
+			<AiOutlineUser className="navb-link-icon" />
 		</NavLink>
 
-		<NavLink to='/menu'  className="navb-link">
-			<AiOutlineMenu className="navb-link-icon" activeClassName="navb-link-icon-active" />
+		<NavLink to='/menu'  className="navb-link" activeClassName="navb-link-icon-active">
+			<AiOutlineMenu className="navb-link-icon" />
 		</NavLink>
 	  </div>
   );

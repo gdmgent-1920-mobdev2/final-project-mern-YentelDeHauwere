@@ -1,4 +1,4 @@
-import { default as mongoose, Connection } from 'mongoose';
+ import { default as mongoose, Connection } from 'mongoose';
 import { default as faker } from 'faker';
 
 import { ILogger } from '../logger';
@@ -33,7 +33,7 @@ class MongoDBDatabase {
 
     this.blogs = [];
     this.categories = [];
-    this.posts = [];
+	this.posts = [];
     this.users = [];
   }
 
@@ -165,6 +165,7 @@ class MongoDBDatabase {
     return category;
   };
 
+  // Create post
   private postCreate = async (
     title: string,
     synopsis: string,
@@ -322,7 +323,7 @@ class MongoDBDatabase {
           await this.createPosts();
         }
         return Post.find().exec();
-      });
+	  });
 
     this.blogs = await Blog.estimatedDocumentCount()
       .exec()

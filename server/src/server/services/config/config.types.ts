@@ -33,6 +33,11 @@ export interface IFacebookConfig {
   clientSecret: string;
 }
 
+export interface IGoogleConfig {
+	clientId: string;
+	clientSecret: string;
+  }
+
 export interface IConfig {
   env: Environment;
   docs: boolean;

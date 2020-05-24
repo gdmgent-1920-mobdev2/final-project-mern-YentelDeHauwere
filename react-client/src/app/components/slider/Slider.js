@@ -4,7 +4,7 @@ import './Slider.scss'
 const Slider = ({children}) => {
 
   return (
-	<div class="slider">
+	<div className="slider">
 		{children}
 	</div>
   );

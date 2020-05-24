@@ -18,8 +18,6 @@ const MapboxLayout = ({children}) => {
 		})
 	}
 
-	
-
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(getCoords)
 	} else {
@@ -43,7 +41,6 @@ const MapboxLayout = ({children}) => {
 	return (
 		<div className="page">
 			<div className="page-main">
-				
 				<div className="mapbox">
 					<ReactMapGL {...viewport} mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN} 
 						onViewportChange={viewport => {
@@ -53,7 +50,6 @@ const MapboxLayout = ({children}) => {
 						<SVGOverlay redraw={redraw} />
 					</ReactMapGL>
 				</div>
-
 				{children}
 			</div>
 		

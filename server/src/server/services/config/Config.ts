@@ -7,6 +7,7 @@ import {
   ServerProtocol,
   IAuthConfig,
   IFacebookConfig,
+  IGoogleConfig,
   IJwtConfig,
 } from './config.types';
 

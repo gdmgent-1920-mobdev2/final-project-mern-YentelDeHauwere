@@ -1,4 +1,5 @@
 import { default as React } from 'react';
+import { NavLink } from 'react-router-dom';
 import { AiFillStar, AiOutlineInfoCircle, AiOutlineScan  } from "react-icons/ai";
 import { GiBatteryPack } from "react-icons/gi";
 import { MdLocationOn  } from "react-icons/md";
@@ -6,13 +7,14 @@ import { TiLocationArrowOutline  } from "react-icons/ti";
 
 import './Slider.scss'
 
-const SlideItem = ({id}) => {
+const SlideItem = ({id, title}) => {
 
   return (
+	  
 	<div className="slide" id={id}>
 		<img className="slide-picture" src={require('../../_static/images/longboard.png')} alt="ninestep" />
 
-		<h4 className="slide-title">Ninestep<AiOutlineInfoCircle className="info" /></h4>
+		<h4 className="slide-title">{title} <NavLink to='/detail'><AiOutlineInfoCircle className="info" /></NavLink> </h4>
 			
 		<p className="slide-review"> 
 			<AiFillStar className="star checked" />
@@ -20,7 +22,6 @@ const SlideItem = ({id}) => {
 			<AiFillStar className="star checked" />
 			<AiFillStar className="star checked" />
 			<AiFillStar className="star" />
-
 			(23)
 		</p>
 

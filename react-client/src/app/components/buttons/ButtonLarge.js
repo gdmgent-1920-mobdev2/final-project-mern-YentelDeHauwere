@@ -1,6 +1,6 @@
 import { default as React } from 'react';
 
-import './ButtonLarge.scss'
+import './Buttons.scss'
 
 const ButtonLarge = ({ content }) => {
 

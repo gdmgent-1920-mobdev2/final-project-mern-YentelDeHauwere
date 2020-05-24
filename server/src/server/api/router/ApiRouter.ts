@@ -22,6 +22,7 @@ class ApiRouter {
   private postController: PostController;
   private userController: UserController;
 
+
   private config: IConfig;
   private authService: AuthService;
 
@@ -40,7 +41,7 @@ class ApiRouter {
     this.helloController = new HelloController();
     this.messageController = new MessageController();
     this.postController = new PostController();
-    this.userController = new UserController(this.config, this.authService);
+	this.userController = new UserController(this.config, this.authService);
   }
 
   private registerRoutes(): void {
@@ -75,7 +76,14 @@ class ApiRouter {
     this.router.get('/users/:id', this.userController.show);
     this.router.delete('/users/:id', this.userController.destroy);
     this.router.post('/auth/signin/', this.userController.signInLocal);
-    this.router.post('/auth/signup/', this.userController.signupLocal);
+	this.router.post('/auth/signup/', this.userController.signupLocal);
+
+	/*
+     * Users routes
+     */
+	this.router.get('/search', this.postController.index);
+	this.router.get('/detail', this.postController.index);
+
   }
 }
 

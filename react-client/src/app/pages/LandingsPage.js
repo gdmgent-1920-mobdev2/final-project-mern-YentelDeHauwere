@@ -1,13 +1,13 @@
 import { default as React} from 'react';
 
 
-const TestPage = () => {
+const LandingsPage = () => {
 
   return (
 	<div>
-
+		
 	</div>
   )
 };
 
-export default TestPage;
+export default LandingsPage;
