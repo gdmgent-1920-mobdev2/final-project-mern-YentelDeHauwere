@@ -11,7 +11,7 @@ import './Slider.scss';
 const Detail = ({children}) => {
 
   return (
-	  <div>
+	  <div >
 		<NavLink to='/search'><FiArrowLeft className="detail-arrow"/></NavLink>
 		<div className="detail-card">
 			<img className="slide-picture detail" src={require('../../_static/images/longboard.png')} alt="ninestep" />

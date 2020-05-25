@@ -18,7 +18,7 @@ const SignInPage = () => {
     ev.preventDefault();
     const user = await signInLocal(email, password);
     if (user) {
-      history.push(Routes.BACKOFFICE_LANDING);
+      history.push(Routes.HOME);
     }
   }
 

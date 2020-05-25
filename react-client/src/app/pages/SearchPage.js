@@ -44,7 +44,7 @@ const HomePage = ({children, amount, onReadMore, className, ...rest}) => {
 		<Navbar />
 		<Slider id="slider" >
 		{posts && posts.map((post, index) => (
-			<SlideItem id="slide-1" title={post.title}/>
+			<SlideItem id="slide-1" title={post.title} adress={post.adress} battery={post.battery} batteryDuration={post.batteryDuration}/>
 		))}
 		</Slider>
 	</div>

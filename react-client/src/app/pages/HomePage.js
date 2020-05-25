@@ -1,11 +1,11 @@
 import { default as React } from 'react';
-import { Navbar, Inputbox, Slider, SlideItem } from '../components';
+import { Navbar, Inputbox } from '../components';
 
 const HomePage = () => {
 
   return (
 	<div>
-		<Inputbox/>
+		<Inputbox />
 		<Navbar />
 	</div>
   )

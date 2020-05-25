@@ -7,7 +7,7 @@ import { TiLocationArrowOutline  } from "react-icons/ti";
 
 import './Slider.scss'
 
-const SlideItem = ({id, title}) => {
+const SlideItem = ({id, title, adress, battery, batteryDuration}) => {
 
   return (
 	  
@@ -27,12 +27,12 @@ const SlideItem = ({id, title}) => {
 
 		<div className="slide-info">
 			<div className="slide-info-battery">
-				<p><GiBatteryPack className="battery" />74%</p>
-				<p>3 uur</p>
+				<p><GiBatteryPack className="battery" />{battery}%</p>
+				<p>{batteryDuration} uur</p>
 			</div>
 			<hr className="slide-info-divider"/>
 			<div className="slide-info-location">
-				<p><MdLocationOn className="location" />23 Leeuwenstraat</p>
+				<p><MdLocationOn className="location" /> {adress}</p>
 				<p>1,9 km</p>
 			</div>
 		</div>

@@ -170,13 +170,19 @@ class MongoDBDatabase {
     title: string,
     synopsis: string,
     body: string,
-    imageUrl: string,
+	imageUrl: string,
+	adress: string,
+	battery: number,
+	batteryDuration: number,
   ) => {
     const postDetail = {
       title,
       synopsis,
       body,
-      imageUrl,
+	  imageUrl,
+	  adress,
+	  battery,
+	  batteryDuration,
       _categoryId: this.getRandomCategory()._id,
     };
 
@@ -198,10 +204,19 @@ class MongoDBDatabase {
     for (let i = 0; i < 28; i++) {
       promises.push(
         this.postCreate(
-          faker.lorem.sentence(),
+		  faker.commerce.productName(),
           faker.lorem.paragraph(),
           `<p>${faker.lorem.paragraphs(10, '</p><p>')}</p>`,
-          `https://picsum.photos/seed/${i}/800/450`,
+		  `https://picsum.photos/seed/${i}/800/450`,
+		  faker.address.streetAddress(),
+		  faker.random.number({
+			'min': 30,
+			'max': 100
+		  }),
+		  faker.random.number({
+			'min': 1,
+			'max': 48
+		  }),
         ),
       );
     }
