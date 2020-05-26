@@ -64,6 +64,11 @@
 			&-active {
 				color: $ecospin-black;
 				border-bottom: 3px solid $ecospin-black;
+
+			}
+
+			&:hover {
+				color: $ecospin-black;
 			}
 		}
 	}

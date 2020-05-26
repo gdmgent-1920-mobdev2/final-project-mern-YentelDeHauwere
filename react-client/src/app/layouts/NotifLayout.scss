@@ -18,6 +18,11 @@
 			color: $ecospin-green;
 			border-bottom: 3px solid $ecospin-green;
 		}
+
+		&:hover {
+			text-decoration: none;
+			color: $ecospin-green;
+		}
 	}
 }
 
@@ -34,6 +39,15 @@
 		padding: 1rem 2rem;
 		background-color: $ecospin-white;
 
+		&.search:hover {
+			background-color: $ecospin-white;
+		}
+
+		&:hover {
+			cursor: pointer;
+			background-color: $ecospin-lightgrey;
+		}
+
 		&-search {
 			background-color: $ecospin-lightgrey;
 			color: $ecospin-grey;
@@ -47,6 +61,7 @@
 			display: flex;
 			padding: 0 !important;
 			align-items: center;
+			width: 80%;
 			
 			&, p {
 				max-width: 80%;

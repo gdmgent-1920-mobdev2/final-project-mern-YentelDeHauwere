@@ -17,7 +17,7 @@ const MessagesPage = () => {
 	</div>
 
 	<div className="notif-notifications">
-		<div className="notif-notifications-item">
+		<div className="notif-notifications-item search">
 			<div className="notif-notifications-item-search"><FiSearch/> Search in chat</div>
 		</div>
 		<div className="notif-notifications-item">

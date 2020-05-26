@@ -1,7 +1,6 @@
 import { default as React } from 'react';
 import { FiSearch } from "react-icons/fi";
 import { BsFilterRight } from "react-icons/bs";
-import * as slider from "../slider/Slider";
 
 import './Searchbar.scss'
 
